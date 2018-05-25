@@ -42,5 +42,26 @@ namespace Caelum.CaixaEletronico.Modelo.Contas
 
             return rendimento;
         }
+
+        public override bool Equals(object obj)
+        {
+            if(obj != null) {
+                Conta outra = (Conta)obj;
+
+                bool numero = (this.Numero == outra.Numero);
+                bool titular = (this.Titular.Equals(outra.Titular));
+
+                return numero && titular;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public override string ToString()
+        {
+            return "Numero: " + this.Numero;
+        }
     }
 }

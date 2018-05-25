@@ -125,5 +125,16 @@ namespace CaixaEletronico
             this.MostraConta(contaSelecionada);
 
         }
+
+        private void testeEquals_click(object sender, EventArgs e)
+        {
+            Cliente guilherme = new Cliente("Guilherme");
+            guilherme.Rg = "12345678-9";
+
+            Cliente paulo = new Cliente("Paulo");
+            paulo.Rg = "12345678-9";
+            //paulo.Rg = "98765432-1"; teste diferente
+            MessageBox.Show(guilherme.ToString() + "\n é igual a \n" + paulo.ToString() + " ? \n\n" + guilherme.Equals(paulo));
+        }
     }
 }
