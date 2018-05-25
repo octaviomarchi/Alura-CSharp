@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace CaixaEletronico
 {
-    class ContaInvestimento : Conta, ITributavel
+    class SaldoInsuficienteException : Exception
     {
-        public double CalculaTributo()
-        {
-            return this.Saldo * 0.03;
-        }
     }
 }
