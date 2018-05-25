@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Caelum.CaixaEletronico.Modelo.Contas
 {
-    abstract class Conta
+    public abstract class Conta
     {
         public int Numero { get; set; }
         public Cliente Titular { get; set; }

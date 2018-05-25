@@ -38,6 +38,8 @@
             this.destinoDaTransferencia = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textoTitular
@@ -94,7 +96,7 @@
             // comboContas
             // 
             this.comboContas.FormattingEnabled = true;
-            this.comboContas.Location = new System.Drawing.Point(90, 27);
+            this.comboContas.Location = new System.Drawing.Point(78, 24);
             this.comboContas.Name = "comboContas";
             this.comboContas.Size = new System.Drawing.Size(121, 21);
             this.comboContas.TabIndex = 7;
@@ -120,7 +122,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(59, 270);
+            this.button3.Location = new System.Drawing.Point(60, 318);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(176, 23);
             this.button3.TabIndex = 10;
@@ -128,11 +130,33 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.testeEquals_click);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(87, 273);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(112, 23);
+            this.button5.TabIndex = 11;
+            this.button5.Text = "Adicionar conta";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(205, 24);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 12;
+            this.button6.Text = "remover";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 353);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.destinoDaTransferencia);
@@ -163,6 +187,8 @@
         private System.Windows.Forms.ComboBox destinoDaTransferencia;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 
