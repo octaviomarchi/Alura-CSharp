@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CaixaEletronico
+namespace Caelum.CaixaEletronico.Modelo
 {
     class SaldoInsuficienteException : Exception
     {
+        public SaldoInsuficienteException(string message) : base(message)
+        {
+        }
     }
 }

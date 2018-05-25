@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Caelum.CaixaEletronico.Modelo.Contas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CaixaEletronico
+namespace Caelum.CaixaEletronico.Modelo.Bancos
 {
     class Banco
     {
