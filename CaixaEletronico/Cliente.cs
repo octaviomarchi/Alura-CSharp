@@ -1,9 +1,11 @@
-﻿namespace Caelum.CaixaEletronico.Modelo.Usuarios
+﻿using System;
+
+namespace Caelum.CaixaEletronico.Modelo.Usuarios
 {
         class Cliente
         {
             public string Nome { get; set; }
-            public string rg;
+            public string Rg { get; set; }
             public string cpf;
             public string endereco;
             public int idade;
@@ -31,5 +33,16 @@
             {
                 return this.idade >= 18;
             }
-        }
+
+            public override bool Equals(Object objeto)
+            {
+                Cliente outroCliente = (Cliente)objeto;
+                return this.Rg == outroCliente.Rg;
+            }
+
+            public override string ToString()
+                {
+                    return "Nome: " + this.Nome + " RG: " + this.Rg;
+                }
+            }
 }
