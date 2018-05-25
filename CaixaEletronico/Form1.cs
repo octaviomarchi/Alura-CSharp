@@ -68,8 +68,19 @@ namespace CaixaEletronico
 
             double valorSaque = Convert.ToDouble(textoValorSaque);
             Conta contaSelecionada = this.BuscaContaSelecionada();
-            contaSelecionada.Saca(valorSaque);
-
+            try
+            {
+                contaSelecionada.Saca(valorSaque);
+                MessageBox.Show("Dinehiro Liberado");
+            }
+            catch (SaldoInsuficienteException)
+            {
+                MessageBox.Show("Saldo Insuficiente");
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("Valor Invalido");
+            }
             this.MostraConta(contaSelecionada);
         }
 

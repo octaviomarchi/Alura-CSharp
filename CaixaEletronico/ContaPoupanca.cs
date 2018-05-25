@@ -12,18 +12,5 @@ namespace CaixaEletronico
         {
             return this.Saldo * 0.02;
         }
-
-        public override bool Saca(double valor)
-        {
-            if (valor > this.Saldo || valor < 0)
-            {
-                return false;
-            }
-            else
-            {
-                this.Saldo -= valor;
-                return true;
-            }
-        }
     }
 }

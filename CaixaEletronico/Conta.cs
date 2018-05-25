@@ -20,7 +20,21 @@ namespace CaixaEletronico
             }
         }
 
-        public abstract bool Saca(double valor);
+        public void Saca(double valor)
+        {
+            if (valor < 0.0)
+            {
+                throw new ArgumentException();
+            }
+            if (valor > this.Saldo)
+            {
+                throw new SaldoInsuficienteException();
+            }
+            else
+            {
+                this.Saldo -= valor;
+            }
+        }
 
         public void TransferePara( Conta destino, double valor)
         {
