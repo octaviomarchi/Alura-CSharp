@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeituraDeDadosDoTerminal", "LeituraDeDadosDoTerminal\LeituraDeDadosDoTerminal.csproj", "{EFD13116-71F9-47AF-9A82-67C9CE35738B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFD13116-71F9-47AF-9A82-67C9CE35738B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFD13116-71F9-47AF-9A82-67C9CE35738B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFD13116-71F9-47AF-9A82-67C9CE35738B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFD13116-71F9-47AF-9A82-67C9CE35738B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
