@@ -15,37 +15,34 @@ namespace CaixaEletronico
 {
     public partial class Form1 : Form
     {
-        Conta[] contas;
-        private int quantidadeDeContas;
-
+        List<Conta> contas;
         public Form1()
         {
             InitializeComponent();
         }
 
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            contas = new Conta[20];
+            contas = new List<Conta>();
 
             Conta contaDoVictor = new ContaCorrente();
             contaDoVictor.Titular = new Cliente();
             contaDoVictor.Titular.Nome = "Victor";
             contaDoVictor.Numero = 1;
-            contas[0] = contaDoVictor;
+            contas.Add(contaDoVictor);
 
             Conta contaDoGuilherme = new ContaPoupanca();
             contaDoGuilherme.Titular = new Cliente();
             contaDoGuilherme.Titular.Nome = "Guilherme";
             contaDoGuilherme.Numero = 2;
-            contas[1] = contaDoGuilherme;
+            contas.Add(contaDoGuilherme);
 
             Conta contaDoMauricio = new ContaInvestimento();
             contaDoMauricio.Titular = new Cliente();
             contaDoMauricio.Titular.Nome = "Mauricio";
             contaDoMauricio.Numero = 3;
-            contas[2] = contaDoMauricio;
-
-            this.quantidadeDeContas = 3;
+            contas.Add(contaDoMauricio);
 
             foreach (Conta conta in this.contas)
             {
@@ -112,36 +109,14 @@ namespace CaixaEletronico
 
         public void AdicionaConta(Conta c)
         {
-            if (this.quantidadeDeContas == this.contas.Length)
-            {
-                Conta[] novo = new Conta[this.contas.Length * 2];
-                for (int i = 0; i < this.quantidadeDeContas; i++)
-                {
-                    novo[i] = this.contas[i];
-                }
-                this.contas = novo;
-            }
-            this.contas[this.quantidadeDeContas] = c;
-            this.quantidadeDeContas++;
+            this.contas.Add(c);
+
             comboContas.Items.Add(c);
         }
 
         public void RemoveConta(Conta c)
         {
-            comboContas.Items.Remove(c);
-            int i;
-            for (i = 0; i < this.quantidadeDeContas; i++)
-            {
-                if (this.contas[i] == c)
-                {
-                    break;
-                }
-            }
-            while (i + 1 < this.quantidadeDeContas)
-            {
-                this.contas[i] = this.contas[i + 1];
-                i++;
-            }
+            this.contas.Remove(c);
         }
     
 
