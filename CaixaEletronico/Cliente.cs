@@ -2,7 +2,7 @@
 
 namespace Caelum.CaixaEletronico.Modelo.Usuarios
 {
-        class Cliente
+        public class Cliente
         {
             public string Nome { get; set; }
             public string Rg { get; set; }
@@ -25,6 +25,7 @@ namespace Caelum.CaixaEletronico.Modelo.Usuarios
                     var maiorDeIdade = this.idade >= 18;
                     var emancipado = (this.EEmancipado);
                     var possuiCPF = !string.IsNullOrEmpty(this.cpf);
+
                     return (maiorDeIdade || emancipado) && possuiCPF;
                 }
             }
@@ -41,8 +42,8 @@ namespace Caelum.CaixaEletronico.Modelo.Usuarios
             }
 
             public override string ToString()
-                {
-                    return "Nome: " + this.Nome + " RG: " + this.Rg;
-                }
+            {
+                return "Nome: " + this.Nome + " RG: " + this.Rg;
             }
-}
+        }
+    }
