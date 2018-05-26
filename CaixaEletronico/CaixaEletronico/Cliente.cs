@@ -43,7 +43,9 @@ namespace Caelum.CaixaEletronico.Modelo.Usuarios
 
             public override string ToString()
             {
-                return "Nome: " + this.Nome + " RG: " + this.Rg;
+                string cliente = "Nome: " + this.Nome + " RG: " + this.Rg;
+                cliente = cliente.ToUpper();
+                return cliente;
             }
         }
     }

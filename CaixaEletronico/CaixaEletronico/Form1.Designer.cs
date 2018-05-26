@@ -40,6 +40,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.texto = new System.Windows.Forms.TextBox();
+            this.botaoSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textoTitular
@@ -122,7 +124,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(60, 318);
+            this.button3.Location = new System.Drawing.Point(60, 312);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(176, 23);
             this.button3.TabIndex = 10;
@@ -150,11 +152,31 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // texto
+            // 
+            this.texto.Location = new System.Drawing.Point(12, 347);
+            this.texto.Multiline = true;
+            this.texto.Name = "texto";
+            this.texto.Size = new System.Drawing.Size(260, 94);
+            this.texto.TabIndex = 13;
+            // 
+            // botaoSave
+            // 
+            this.botaoSave.Location = new System.Drawing.Point(99, 447);
+            this.botaoSave.Name = "botaoSave";
+            this.botaoSave.Size = new System.Drawing.Size(75, 23);
+            this.botaoSave.TabIndex = 14;
+            this.botaoSave.Text = "Salvar texto";
+            this.botaoSave.UseVisualStyleBackColor = true;
+            this.botaoSave.Click += new System.EventHandler(this.botaoSave_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 353);
+            this.ClientSize = new System.Drawing.Size(284, 478);
+            this.Controls.Add(this.botaoSave);
+            this.Controls.Add(this.texto);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button3);
@@ -189,6 +211,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox texto;
+        private System.Windows.Forms.Button botaoSave;
     }
 }
 

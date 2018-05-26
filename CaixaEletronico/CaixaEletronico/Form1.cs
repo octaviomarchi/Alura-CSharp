@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,6 +50,16 @@ namespace CaixaEletronico
                 if (conta != null) {
                     comboContas.Items.Add(conta);
                     destinoDaTransferencia.Items.Add(conta);
+                }
+            }
+
+            if (File.Exists("texto.txt"))
+            {
+                using (Stream entrada = File.Open("texto.txt", FileMode.Open))
+                using (StreamReader leitor = new StreamReader(entrada))
+                {
+                    string conteudo = leitor.ReadToEnd();
+                    texto.Text = conteudo;
                 }
             }
         }
@@ -163,6 +174,17 @@ namespace CaixaEletronico
             Conta conta = BuscaContaSelecionada();
             this.RemoveConta(conta);
         }
+        private void botaoSave_Click(object sender, EventArgs e)
+        {
+            Stream saida = File.OpenWrite("texto.txt");
+            StreamWriter escritor = new StreamWriter(saida);
+
+            escritor.Write(texto.Text);
+
+            escritor.Close();
+            saida.Close();
+        }
+
     }
 }
 

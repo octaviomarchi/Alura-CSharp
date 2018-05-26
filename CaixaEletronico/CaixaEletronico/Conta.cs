@@ -61,7 +61,9 @@ namespace Caelum.CaixaEletronico.Modelo.Contas
 
         public override string ToString()
         {
-            return "Numero: " + this.Numero;
+            string conta = "Numero: " + this.Numero;
+            conta = conta.ToUpper();
+            return conta;
         }
     }
 }
